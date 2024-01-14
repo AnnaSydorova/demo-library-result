@@ -7,13 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "assessment-demo-button": "^0.2.1",
-    "assessment-demo-combined-search": "^0.2.1",
-    "assessment-demo-icon": "^0.2.1",
+    "assessment-demo-button": "^0.2.2",
+    "assessment-demo-combined-search": "^0.2.3",
+    "assessment-demo-icon": "^0.2.2",
     "assessment-demo-input": "^0.2.1",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

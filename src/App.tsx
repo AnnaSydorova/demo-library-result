@@ -1,9 +1,9 @@
-import { Icon } from "assessment-demo-icon";
-import { Input } from "assessment-demo-input";
-import { Button } from "assessment-demo-button";
-import { Search } from "assessment-demo-combined-search";
-
+import Input from "assessment-demo-input";
+import Button from "assessment-demo-button";
+import Search from "assessment-demo-combined-search";
 import { useState } from "react";
+import Icon from "assessment-demo-icon";
+
 function App() {
   const [isClicked, setIsClicked] = useState(false);
   const [text, setText] = useState("");
@@ -25,7 +25,9 @@ function App() {
         {isClicked ? <p>Click is successful!</p> : null}
         <Input
           placeholder="Enter some text"
-          oninput={(e) => setText(e.target.value)}
+          oninput={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setText(e.target.value)
+          }
         />
         <p>Text from input: {text}</p>
         <Search items={searchItems} />
